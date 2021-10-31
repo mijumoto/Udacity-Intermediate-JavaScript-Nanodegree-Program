@@ -144,6 +144,7 @@ function showInfoGraph(){
 }
 
 async function validateForm(event) {
+    event.preventDefault();
     const fieldValues = getFieldValues();
     const fieldValidationErrors = validateFields(fieldValues);
     console.log(fieldValidationErrors);
@@ -154,7 +155,6 @@ async function validateForm(event) {
         gridContainter.innerHTML = tiles;
         showInfoGraph();
     }
-    event.preventDefault();
 }
 
 function resetErrors() {
