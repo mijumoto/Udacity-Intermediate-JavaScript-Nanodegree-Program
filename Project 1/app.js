@@ -1,6 +1,11 @@
     //Fetch data from json
     const getDinoData = async () => {
-        const fetchedData = await fetch("./dino.json");
+        let fetchedData = null;
+        try {
+            fetchedData = await fetch("./dino.json");
+        } catch (error) {
+            fetchedData = await fetch("https://raw.githubusercontent.com/mijumoto/Udacity-Intermediate-JavaScript-Nanodegree-Program/main/Project%201/dino.json");
+        }
         const data = await fetchedData.json();
         return data.Dinos;
     };
@@ -157,7 +162,7 @@ async function validateForm(event) {
         log.innerHTML = fieldValidationErrors.errors; 
     } else {
         const tiles = await generateTiles();
-        gridContainter.innerHTML = tiles;
+        gridContainer.innerHTML = tiles;
         showInfoGraph();
     }
 }
@@ -168,7 +173,9 @@ function resetErrors() {
  
 const form = document.getElementById('dino-compare');
 const grid = document.getElementById('grid');
-const gridContainter = document.getElementById('grid-container');
+const gridContainer = document.getElementById('grid-container');
 const log = document.getElementById('error-msg');
+const regenButton = document.getElementById('regen-button');
 resetErrors();
 form.addEventListener('submit', validateForm);
+regenButton.addEventListener('click', validateForm);

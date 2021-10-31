@@ -177,7 +177,7 @@ select {
     display: block;
 }
 
-#btn {
+#regen-button, #btn {
     display: inline-block;
     background: #ccc;
     padding: 0.8em;
@@ -185,7 +185,7 @@ select {
     transition: ease 0.3s all;
 }
 
-#btn:hover {
+#regen-button:hover, #btn:hover {
     background: #777;
     color: #fff;
     cursor: pointer;
