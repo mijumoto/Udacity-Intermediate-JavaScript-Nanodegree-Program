@@ -95,15 +95,11 @@
                 compare.Diets
             ])
             dino.randomFact = dino.randomFact()(dino);
-/*             const returnedFunction = dino.randomFact();
-            console.log(returnedFunction);
-            console.log(returnedFunction(dino)); */
             if(index === 4) {
                 allObjects.push(human)
             }
             allObjects.push(dino)
         })
-        console.log(allObjects);
         return allObjects;
     }
     
