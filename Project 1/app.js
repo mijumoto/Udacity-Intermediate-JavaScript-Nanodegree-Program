@@ -53,12 +53,12 @@
     // Create Human Object
     const Human = (data) => {
         return {
-            species: 'Human',
+            species: data.name,
             name: data.name,
             weight: data.weight,
             height: (data.feet * 12) + parseInt(data.inches),
             diet: data.diet.toLowerCase(),
-            randomFact: data.name,
+            randomFact: '',
             image: 'human.png'
         }
     };
