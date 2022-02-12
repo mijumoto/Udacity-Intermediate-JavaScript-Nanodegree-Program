@@ -53,10 +53,10 @@ To complete this project, your frontend code must:
 
 To complete this project, your backend code must:
 
-- [ ] Be built with Node/Express
-- [ ] Make successful calls to the NASA API
+- [x] Be built with Node/Express
+- [x] Make successful calls to the NASA API
 - [ ] Use pure functions to do any logic necessary
-- [ ] Hide any sensetive information from public view (In other words, use your dotenv file)
+- [x] Hide any sensetive information from public view (In other words, use your dotenv file)
 
 ### Above and Beyond
 

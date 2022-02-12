@@ -1,0 +1,7 @@
+/dist
+/node_modules
+.babelrc
+.eslintrc
+.github
+.vscode
+README.md
